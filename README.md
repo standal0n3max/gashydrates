@@ -16,10 +16,9 @@ This repository contains code for a machine learning model that detects the pres
 
 Install the required libraries using pip:
 
-```bash
-pip install keras tensorflow split-folders matplotlib numpy==1.22.3```
+```bash pip install keras tensorflow split-folders matplotlib numpy==1.22.3```bash
 
-## Dataset Splitting
+Dataset Splitting
 
 The dataset has been split into training, validation, and test sets using the split-folders library. The dataset is organized as follows:
 
@@ -42,6 +41,7 @@ The trained model achieved an accuracy of 97.92% on the test data.
 
 Predicting on Images
 You can predict the presence of "hydrates" in images using the provided predict_image_class function. Example usage:
+```bash
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
