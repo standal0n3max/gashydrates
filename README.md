@@ -70,8 +70,10 @@ image_path = "path/to/your/image.jpg"
 predicted_class = predict_image_class(hydrdrate_model, image_path)
 print(f"The predicted class is: {predicted_class}")
 ```
+
 ### Real-time Detection
 To perform real-time detection and trigger an alarm when "hydrates_yes" is detected in a video stream, integrate the provided code into your video stream handling process. Ensure to replace the get_next_frame() function with the logic to receive frames in real-time from your video source.
+
 ```
 # Placeholder function to simulate getting the next frame in real-time
 def get_next_frame():
