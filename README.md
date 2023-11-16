@@ -17,7 +17,7 @@ This repository contains code for a machine learning model that detects the pres
 Install the required libraries using pip:
 
 ```bash
-pip install keras tensorflow split-folders matplotlib numpy==1.22.3
+pip install keras tensorflow split-folders matplotlib numpy==1.22.3```
 
 ## Dataset Splitting
 
