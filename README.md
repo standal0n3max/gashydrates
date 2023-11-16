@@ -16,7 +16,7 @@ This repository contains code for a machine learning model that detects the pres
 
 Install the required libraries using pip:
 
-```bash pip install keras tensorflow split-folders matplotlib numpy==1.22.3```bash
+```pip install keras tensorflow split-folders matplotlib numpy==1.22.3```
 
 Dataset Splitting
 
@@ -25,6 +25,7 @@ The dataset has been split into training, validation, and test sets using the sp
 Training Set: Hydrates_split/train
 Validation Set: Hydrates_split/val
 Test Set: Hydrates_split/test
+
 ## Model Architecture
 
 The model architecture utilizes a pre-trained ResNet50V2 convolutional base followed by additional fully connected layers for classification. The model summary is provided in the code.
@@ -39,9 +40,9 @@ The trained model achieved an accuracy of 97.92% on the test data.
 
 ## Usage
 
-Predicting on Images
+### Predicting on Images
 You can predict the presence of "hydrates" in images using the provided predict_image_class function. Example usage:
-```bash
+```
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -68,10 +69,10 @@ def predict_image_class(model, image_path):
 image_path = "path/to/your/image.jpg"
 predicted_class = predict_image_class(hydrdrate_model, image_path)
 print(f"The predicted class is: {predicted_class}")
-
-Real-time Detection
+```
+### Real-time Detection
 To perform real-time detection and trigger an alarm when "hydrates_yes" is detected in a video stream, integrate the provided code into your video stream handling process. Ensure to replace the get_next_frame() function with the logic to receive frames in real-time from your video source.
-
+```
 # Placeholder function to simulate getting the next frame in real-time
 def get_next_frame():
     # Replace this with the code to fetch the next frame from your video stream
@@ -91,4 +92,5 @@ while True:
         # Add your alarm code here (e.g., sound an alarm, display a message, etc.)
 
     # Perform other processing or visualization with the predicted class as needed
+```
 
